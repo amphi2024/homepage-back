@@ -4,6 +4,7 @@ const path = require('path');
 const logger = require('morgan');
 
 const serverDownloadsRouter = require('./routes/servers');
+const releasesRouter = require('./routes/releases');
 const fs = require("fs");
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.use('/servers', serverDownloadsRouter);
+app.use('/releases', releasesRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
