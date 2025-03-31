@@ -6,7 +6,7 @@ const streamFile = require("./streamFile");
 
 router.get('/latest', (req, res) => {
 
-    const filename = "server-1.0.0.jar";
+    const filename = "server-1.1.0.jar";
     streamFile(res,filename, path.join(__dirname, 'files', "servers", filename));
 
 });
